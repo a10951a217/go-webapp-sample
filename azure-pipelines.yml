@@ -19,6 +19,8 @@ stages:
               echo Sample Line2 in JobA
             displayName: "This is Job A Text"
       - job: JobB
+        dependsOn: JobA
+        condition: failed()
         steps:
           - script: |
               echo Sample Line1 in JobB
