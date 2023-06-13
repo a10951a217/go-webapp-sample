@@ -23,4 +23,18 @@ stages:
           - script: |
               echo Sample Line1 in JobB
               echo Sample Line2 in JobB
-            displayName: "This is Job B Text"                      
+            displayName: "This is Job B Text"
+  - stage: Deploy
+    jobs:
+      - job: JobC
+        steps:
+          - script: |
+              echo Sample Line1 in JobC
+              echo Sample Line2 in JobC
+            displayName: "This is Job C Text"
+      - job: JobD
+        steps:
+          - script: |
+              echo Sample Line1 in JobD
+              echo Sample Line2 in JobD
+            displayName: "This is Job D Text"            
